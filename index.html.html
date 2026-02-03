@@ -22,10 +22,6 @@
         }
 
         /* Page load animation */
-        body.loading {
-            overflow: hidden;
-        }
-
         .page-loader {
             position: fixed;
             top: 0;
@@ -885,7 +881,7 @@
         }
     </style>
 </head>
-<body class="loading">
+<body>
     <div class="page-loader">
         <div class="loader-content">
             <div class="loader-logo">RemoteFlow</div>
@@ -1058,13 +1054,6 @@
     </div>
 
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-        // Remove loading class after page loads
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                document.body.classList.remove('loading');
-            }, 2300);
-        });
-
         // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
